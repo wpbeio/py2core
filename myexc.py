@@ -12,7 +12,6 @@ class NetworkError(IOError):
     def __init__(self, arg):
         super(NetworkError, self).__init__()
         self.arg = arg
-    pass
 
 
 class FileError(IOError):
@@ -21,7 +20,6 @@ class FileError(IOError):
     def __init__(self, arg):
         super(FileError, self).__init__()
         self.arg = arg
-    pass
 
 
 def UpdArgs(args, newarg=None):
