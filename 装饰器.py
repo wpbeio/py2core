@@ -26,7 +26,7 @@ def logged(when):
                 return f(*args, **kargs)
             finally:
                 log(f, *args, **kargs)
-                print('time delta:{0}'.format(time.time() - now))
+                print('time delta:{0}\n'.format(time.time() - now))
         return wrapper
     try:
         # 按照参数返回装饰器
@@ -40,13 +40,15 @@ def logged(when):
 
 
 def factorial(n):
+    
     if n == 0 or n == 1:
-        return 1
+        return True
     else:
         return(n * factorial(n - 1))
 
 
 def main():
+    print(factorial(10))
     hello("world")
     hello2('beio')
 

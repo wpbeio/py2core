@@ -1,7 +1,7 @@
 #!/usr/bin/env/ python
 import urllib.request
 
-
+import 装饰器 as log
 def firstNonBlank(lines):
     for eachLine in lines:
         if not eachLine.strip():
@@ -18,7 +18,7 @@ def firstLast(webpage):
     lines.reverse()
     print(firstNonBlank(lines), end=' ')
 
-
+@log.logged('post')
 def download(url='http://wwww.baidu.com', process=firstLast):
     try:
         retval = urllib.request.urlretrieve(url)[0]
@@ -29,6 +29,7 @@ def download(url='http://wwww.baidu.com', process=firstLast):
 
 
 def main():
+    
     download()
 
 
